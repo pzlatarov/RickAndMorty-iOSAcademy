@@ -15,6 +15,17 @@ final class RMCharacterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         title = "Characters"
+        
+        let request = RMRequest(endpoint: .character, queryParameters: [
+            URLQueryItem(name: "name", value: "Rick"),
+            URLQueryItem(name: "status", value: "alive")
+        ])
+        
+        print(request.url)
+        
+        RMService.shared.execute(request, expectingType: RMCharacter.self, completion: {result in
+            
+        })
     }
     
 
