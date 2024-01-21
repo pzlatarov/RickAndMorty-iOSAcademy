@@ -16,6 +16,7 @@ final class RMTabBarController: UITabBarController {
         setUpTabs()
     }
     
+    /// Controller to house tabs and root tab controllers
     private func setUpTabs(){
         let charactersVC = RMCharacterViewController()
         let locationsVC = RMLocationViewController()
